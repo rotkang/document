@@ -25,7 +25,6 @@ yarn.scheduler.increment-allocation-mb=512
 -- CPU 规整化
 yarn.scheduler.increment-allocation-vcores=1
 Fair Scheduler 公平调度器
---- yarn-site.xml 配置 Start ---
 
 -- 选择调度器种类
 yarn.resourcemanager.scheduler.class=org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.FairScheduler;
@@ -82,14 +81,14 @@ yarn.scheduler.fair.allow-undeclared-pools=false
 
 -- 锁定调度程序并重新计算公平份额的时间间隔，默认值 500ms，
 yarn.scheduler.fair.update-interval-ms=500ms
-
---- yarn-site.xml 配置 End ---
-
-
---- 自定义参数, fair-scheduler.xml
+```
 
 
 
+# fair-scheduler.xml配置
+
+
+```
 --- queue 元素 Start ---
 
 -- 最少资源保证量，设置格式为“X mb, Y vcores”，当一个队列的最少资源保证量未满足时，它将优先于其他同级队列获得资源
