@@ -1,4 +1,5 @@
-``` <-- yarn-site.xml --> ```
+# yarn-site.xml配置  
+```
 -- 作业提交到的队列, 默认 default
 mapreduce.job.queuename=rooo.default
 
@@ -245,3 +246,4 @@ reject
     <rule name="default" queue="sample_queue"/>
   </queuePlacementPolicy>
 </allocations>
+```
