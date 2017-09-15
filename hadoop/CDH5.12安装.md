@@ -61,4 +61,12 @@ CentOS 7.3.1611
 
 4.4. source /etc/profile
 
+5. 安装NTP服务
+
+5.1. 所有节点服务器：`yum -y install ntp`
+
+5.2. 重新指定同步时间：cdh1服务器 `vi /etc/ntp.conf` 指向 `server ntp.api.gz iburst` 其它cdh2,cdh3修改成：`server cdh1 iburst`
+
+
+
 # Cloudera Manager安装 #
