@@ -19,24 +19,28 @@ CentOS 7.3.1611
 
 1. 检查防火墙是否开启
 
-检查防火墙是否开启：`firewall-cmd --state`
+1.1. 检查防火墙是否开启：`firewall-cmd --state`
 
-停止防火墙：`systemctl stop firewalld.service` 
+1.2. 停止防火墙：`systemctl stop firewalld.service` 
 
-禁止开机启动防火墙：`systemctl disable firewalld.service` 
+1.3. 禁止开机启动防火墙：`systemctl disable firewalld.service` 
 
 2. 检查网络是否畅通
 
 3. 配置SSH无密登录
 
-生成密钥(可一直回车)：`ssh-keygen -b 1024 -t rsa`
+3.1. 生成密钥(可一直回车)：`ssh-keygen -b 1024 -t rsa`
 
-管理密钥：`cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys`
+3.2. 管理密钥：`cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys`
 
-远程拷贝：`scp ~/.ssh/authorized_keys userName@hostName:~/.ssh/authorized_keys`
+3.3. 远程拷贝：`scp ~/.ssh/authorized_keys userName@hostName:~/.ssh/authorized_keys`
 
 如果使用root无密登录修改vi /etc/ssh/sshd_config中的`PermitRootLogin yes` `StrictModes no`
 
 4. 检查JDK是否符合版本要求，详见：https://www.cloudera.com/downloads/cdh/5-12-0.html
+
+4.1. 查看系统自带的JDK：`rpm -qa|grep java`
+
+4.2. 卸载系统自带的JDK：`rpm -e --nodeps java-1.8.0-openjdk-headless-1.8.0.102-4.b14.el7.x86_64|java-1.8.0-openjdk-1.8.0.102-4.b14.el7.x86_64`
 
 # Cloudera Manager安装 #
