@@ -14,6 +14,9 @@ CentOS 7.3.1611
 ```
 
 # 安装前工作 #
+
+参考官网手册：https://www.cloudera.com/downloads/cdh/5-12-0.html
+
 1. 检查防火墙是否开启
 
 检查防火墙是否开启：`firewall-cmd --state`
