@@ -32,6 +32,8 @@ CentOS 7.3.1611
 
 远程拷贝：`scp ~/.ssh/authorized_keys userName@hostName:~/.ssh/authorized_keys`
 
+如果使用root无密登录修改vi /etc/ssh/sshd_config中的`PermitRootLogin yes` `StrictModes no`
+
 4. 检查JDK是否符合版本要求，详见：https://www.cloudera.com/downloads/cdh/5-12-0.html
 
 # Cloudera Manager安装 #
