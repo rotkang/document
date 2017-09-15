@@ -71,6 +71,34 @@ CentOS 7.3.1611
 
 5.4 `systemctl enable ntpd`
 
+6. 安装MySQL 5.7
+
+6.1. 下载mysql源安装包
+
+wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm
+
+6.2. 安装mysql源
+
+`yum localinstall mysql57-community-release-el7-8.noarch.rpm`
+
+检查mysql源是否安装成功
+`yum repolist enabled | grep "mysql.*-community.*"`可以修改vim /etc/yum.repos.d/mysql-community.repo源，改变默认安装的mysql版本。
+比如要安装5.6版本，将5.7源的enabled=1改成enabled=0。然后再将5.6源的enabled=0改成enabled=1即可。
+
+6.3. 安装MySQL
+
+`yum install mysql-community-server`
+
+不要密码策略vi /etc/my.conf `validate_password = off`
+
+6.4. 启动MySQL服务
+
+启动：`systemctl start mysqld` 状态：`systemctl status mysqld`
+
+6.5. 开机启动
+
+`systemctl enable mysqld` `systemctl daemon-reload`
+
 
 
 # Cloudera Manager安装 #
