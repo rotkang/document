@@ -5,9 +5,9 @@
 CentOS 7.3.1611
 
 **IP地址分配** 
-192.168.136.11 cdh1 cdh1.localdomain
-192.168.136.12 cdh2 cdh2.localdomain
-192.168.136.13 cdh3 cdh3.localdomain
+192.168.136.11 cdh1.localdomain cdh1
+192.168.136.12 cdh2.localdomain cdh2
+192.168.136.13 cdh3.localdomain cdh3
 
 **硬件配置** 
 4 Cores,4G Memory,40G Disk 
