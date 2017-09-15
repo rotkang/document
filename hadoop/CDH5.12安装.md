@@ -43,4 +43,18 @@ CentOS 7.3.1611
 
 4.2. 卸载系统自带的JDK：`rpm -e --nodeps java-1.8.0-openjdk-headless-1.8.0.102-4.b14.el7.x86_64|java-1.8.0-openjdk-1.8.0.102-4.b14.el7.x86_64`
 
+4.3. 安装JDK，配置JDK环境变量。`vi /etc/profile`
+
+`JAVA_HOME=/usr/app/java/jdk1.8.0_111`
+
+`JRE_HOME=/usr/app/java/jdk1.8.0_111/jre`
+
+`PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin`
+
+`CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib`
+
+`export JAVA_HOME JRE_HOME PATH CLASSPATH`
+
+4.4. source /etc/profile
+
 # Cloudera Manager安装 #
