@@ -25,6 +25,10 @@ CentOS 7.3.1611
 
 1.3. 禁止开机启动防火墙：`systemctl disable firewalld.service` 
 
+1.4. 关闭SELINUX： `sed -i "s/SELINUX=enforcing/SELINUX=disabled/" /etc/selinux/config`
+
+1.5. 重启`reboot`
+
 2. 检查网络是否畅通
 
 3. 配置SSH无密登录
